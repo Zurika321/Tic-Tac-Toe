@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      td {
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        border: 1px solid black;
+      }
+      .highlight {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <label for="sizeInput">Nhập kích thước bảng : </label>
+    <input type="number" id="sizeInput" min="5" value="10" />
+    <button onclick="createTable()">Tạo bảng</button><br />
+    <label for="winCondition_Input">Nhập độ dài hàng chiến thắng: </label>
+    <input type="number" id="winCondition_Input" min="5" value="5" />
+    <button onclick="winCondition_()">Đổi</button><br />
+    <label for="pick_player_turm">Chỉnh lượt ai đi trước</label>
+    <select name="" id="select" onchange="pick_turm(this.value)">
+      <option value="thuaditruoc">Thua đi trước</option>
+      <option value="X">X</option>
+      <option value="O">O</option></select
+    ><br />
+    <label for="">Tới lượt của :</label>
+    <label
+      id="turm_div"
+      style="border: 1px solid black; padding: auto 5px"
+    ></label>
+    <table id="myTable">
+      <tbody>
+        <!-- Bảng sẽ được tạo bằng JavaScript -->
+      </tbody>
+    </table>
+    <button onclick="reset('all')" id="newgame">New Game</button>
+    <script src="script.js"></script>
+  </body>
+</html>
